@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "rest_framework",
+    "crispy_forms",
+    "product",
 ]
 
 MIDDLEWARE = [
@@ -72,6 +75,9 @@ WSGI_APPLICATION = "COAX_test.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+
+
+AUTH_USER_MODEL = "product.User"
 
 DATABASES = {
     "default": {
