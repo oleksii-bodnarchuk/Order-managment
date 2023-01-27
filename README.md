@@ -9,8 +9,8 @@ This is a Django web application that allows users to view products, filter them
 - Django REST framework 3.x
 
 ### Installation
-1. Clone the repository: `git clone https://github.com/your-username/product-ordering-app.git`
-2. Change directory to the project folder: `cd product-ordering-app`
+1. Clone the repository: `https://github.com/oleksii-bodnarchuk/Order-managment.git`
+2. Change directory to the project folder: `cd Order-managment`
 3. Create a virtual environment and activate it: 
 - `python3 -m venv venv`
 - `source venv/bin/activate`
