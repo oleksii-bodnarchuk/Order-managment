@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+{% block content %}
+
+  <form id="order-form">
+      <input type="text" name="name">
+      <input type="email" name="email">
+      <input type="hidden" name="product_id" value="{{ product.id }}">
+      <button type="submit">Order</button>
+  </form>
+
+  <script>
+  $(document).ready(function(){
+      $("#order-form").submit(function(e){
+          e.preventDefault();
+          var formData = $(this).serialize();
+          $.post("/order/", formData, function(data){
+              console.log(data);
+          });
+      });
+  });
+  </script>
+
+{% endblock %}
