@@ -23,11 +23,11 @@ This is a Django web application that allows users to view products, filter them
 8. Access the application in your browser at [http://127.0.0.1:8000]()
 
 ### Usage
-View products
-You can view all the products at the homepage of the application. You can filter the products by category by using the filter form on the top of the page.
+##### View products
+You can view all the products at `products/` of the application. You can filter the products by category by using the filter form on the top of the page.
 
 ### Place an order
-You can place an order for a product by visiting the product detail page and submitting the order form.
+You can place an order for a product by visiting `order/create/` page and submitting the order form.
 
 ### Admin panel
 You can access the admin panel by visiting http://127.0.0.1:8000/admin. You can use the admin panel to add, edit, and delete products and categories. You can also view all the orders placed by the users.
