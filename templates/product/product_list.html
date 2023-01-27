@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <form method="get" action="{% url 'product:product-list' %}">
+      <label for="category">Filter by category:</label>
+      <select name="category" id="category">
+          <option value="">All</option>
+          {% for category in categories %}
+          <option value="{{ category.pk }}">{{ category.name }}</option>
+          {% endfor %}
+      </select>
+      <input type="submit" value="Filter">
+  </form>
+  <h4>
+    Create order
+    <a href="{% url 'product:order-create' %}" class="btn btn-primary link-to-page">
+      Create
+    </a>
+  </h4>
+  <table>
+      <thead>
+          <tr>
+              <th>id</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Price</th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for product in products %}
+          <tr>
+              <td>{{ product.id }}</td>
+              <td>{{ product.name }}</td>
+              <td>{{ product.category.name }}</td>
+              <td>{{ product.price }}</td>
+          </tr>
+          {% endfor %}
+      </tbody>
+  </table>
+
+{% endblock %}
